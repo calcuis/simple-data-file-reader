@@ -1,8 +1,7 @@
 import os, json, csv
 
 def list_files():
-    files = [f for f in os.listdir('.') if os.path.isfile(f) and f.endswith(('.txt', '.csv', '.json'))]
-    return files
+    return [f for f in os.listdir('.') if os.path.isfile(f) and f.endswith(('.txt', '.csv', '.json'))]
 
 def read_file(file_name):
     if file_name.endswith('.txt'):
